@@ -315,7 +315,7 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
 
 .body3 {
   min-height: 1100px;
-  background:$background;
+  background: $background;
 
   &__item {
     min-height: 250px;
@@ -377,52 +377,332 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
       background: $hover-color;
     }
   }
-  .video{
+
+  .video {
     display: flex;
     justify-content: center;
     padding: 90px 0;
     align-items: center;
 
-    &__item{
-      width:890px;
-      height:562px;
+    &__item {
+      width: 890px;
+      height: 562px;
     }
   }
-  .block{
-    max-width:$container-width;
+
+  .block {
+    max-width: $container-width;
     margin: 0 auto;
-    &__row{
-      display:flex;
-      flex-wrap:wrap;
-     padding-bottom: 100px;
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 100px;
     }
-    &__element1{
+
+    &__element1 {
       flex: 1 1 50%;
       margin-bottom: 100px;
     }
-    &__text1{
+
+    &__text1 {
       font-family: HelveticaNeue;
       font-size: 36px;
       line-height: 42px;
       color: #435766;
       width: 350px;
     }
-    &__element2{
+
+    &__element2 {
       flex: 1 1 50%;
       margin-bottom: 100px;
     }
-    &__element3{
+
+    &__element3 {
       flex: 1 1 50%;
     }
-    &__element4{
+
+    &__element4 {
       flex: 1 1 50%;
     }
-    &__text2{
+
+    &__text2 {
       padding-left: 50px;
       font-family: HelveticaNeue;
       font-size: 36px;
       line-height: 42px;
       color: #435766;
+    }
+  }
+
+  @include respond-to(handhelds) {
+
+    &__item {
+      height: auto;
+      padding-top: 50px;
+    }
+
+    &__content {
+      height: 150px;
+    }
+
+    .video {
+      padding: 0 5px 30px;
+
+      &__item {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+      }
+    }
+    .block {
+      max-width: 100%;
+      &__row {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+      }
+
+      &__element1 {
+
+        padding-bottom: 10px;
+        margin-bottom: 0;
+
+      }
+      &__text1 {
+        width: 305px;
+      }
+
+      &__element2 {
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+        flex: none;
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+
+      &__element3 {
+        flex: none;
+        max-width: 100%;
+        padding-bottom: 10px;
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+      }
+
+      &__element4 {
+        flex: none;
+        max-width: 100%;
+      }
+      &__text2 {
+        padding-left:0;
+      }
+    }
+  }
+  @include respond-to(middle) {
+
+    &__item {
+      height: auto;
+      padding-top: 50px;
+    }
+
+    &__content {
+      height: 150px;
+    }
+
+    .video {
+      padding: 0 5px 30px;
+
+      &__item {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+      }
+    }
+    .block {
+      max-width: 100%;
+      &__row {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+      }
+
+      &__element1 {
+
+        padding-bottom: 10px;
+        margin-bottom: 0;
+
+      }
+      &__text1 {
+        width: 305px;
+      }
+
+      &__element2 {
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+        flex: none;
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+
+      &__element3 {
+        flex: none;
+        max-width: 100%;
+        padding-bottom: 10px;
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+      }
+
+      &__element4 {
+        flex: none;
+        max-width: 100%;
+      }
+      &__text2 {
+        padding-left:0;
+      }
+    }
+  }
+  @include respond-to(tablets) {
+
+    &__item {
+      height: auto;
+      padding-top: 50px;
+    }
+
+    &__content {
+      height: 150px;
+    }
+
+    .video {
+      padding: 0 5px 30px;
+
+      &__item {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+      }
+    }
+    .block {
+      max-width: 100%;
+      &__row {
+
+        padding-bottom: 50px;
+      }
+
+      &__element1 {
+
+        padding-left: 20px;
+
+        margin-bottom: 10px;
+
+      }
+      &__text1 {
+        width: 305px;
+      }
+
+      &__element2 {
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+
+      &__element3 {
+        max-width: 100%;
+        padding-bottom: 10px;
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+      }
+
+      &__element4 {
+        max-width: 100%;
+      }
+      &__text2 {
+        padding-left:20px;
+      }
+    }
+  }
+  @include respond-to(PC) {
+
+    &__item {
+      height: auto;
+      padding-top: 50px;
+    }
+
+    &__content {
+      height: 150px;
+    }
+
+    .video {
+      padding: 0 5px 30px;
+
+      &__item {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+      }
+    }
+    .block {
+      max-width: 100%;
+      &__row {
+
+        padding-bottom: 50px;
+      }
+
+      &__element1 {
+
+        padding-left: 20px;
+
+        margin-bottom: 10px;
+
+      }
+      &__text1 {
+        width: 305px;
+      }
+
+      &__element2 {
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+
+      &__element3 {
+        max-width: 100%;
+        padding-bottom: 10px;
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          padding: 0 10px;
+        }
+      }
+
+      &__element4 {
+        max-width: 100%;
+      }
+      &__text2 {
+        padding-left:20px;
+      }
     }
   }
 }
@@ -585,16 +865,15 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
   min-height: 395px;
   background-color: #373A3C;
 
-  &__container{
+  &__container {
     max-width: $container-width;
     margin: 0 auto;
   }
 
   &__row {
-
     display: flex;
     width: 850px;
-    padding: 60px 0 0;
+    padding: 60px 0;
     justify-content: space-between;
   }
 
@@ -615,7 +894,7 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
       transition: 0.5s;
 
       &:hover {
-        color:$hover-color;
+        color: $hover-color;
       }
     }
 
@@ -633,8 +912,10 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
     width: 85px;
     display: flex;
     justify-content: space-between;
-    a{
+
+    a {
       transition: 1s;
+
       &:hover {
         transform: scale(1.3);
       }
@@ -659,7 +940,7 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
   .footer {
     margin: 0 auto;
     width: 1400px;
-    padding: 20px 0 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
 
@@ -670,12 +951,11 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
       color: #FFFFFF;
     }
   }
+
   @include respond-to(handhelds) {
     &__row {
       margin: 0 auto;
-      display: flex;
       width: auto;
-      padding: 60px 0 0;
       justify-content: space-around;
     }
     &__line {
@@ -683,10 +963,59 @@ $background:radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(
     }
     .footer {
       width: auto;
-      padding: 20px 10px 0;
+      padding: 20px 10px;
+    }
+  }
+  @include respond-to(middle) {
+    &__row {
+      margin: 0 auto;
+      width: auto;
+      justify-content: space-around;
+    }
+
+    &__line {
+      padding: 10px;
+    }
+
+    .footer {
+      width: auto;
+      padding: 20px 10px;
+    }
+  }
+  @include respond-to(tablets) {
+    &__row {
+      margin: 0 auto;
+      width: auto;
+      justify-content: space-around;
+    }
+
+    &__line {
+      padding: 10px;
+    }
+
+    .footer {
+      width: auto;
+      padding: 20px 10px;
+    }
+  }
+  @include respond-to(PC) {
+    &__row {
+      margin: 0 auto;
+      width: auto;
+      justify-content: space-around;
+    }
+
+    &__line {
+      padding: 10px;
+    }
+
+    .footer {
+      width: auto;
+      padding: 20px 10px;
     }
   }
 }
+
 
 
 
